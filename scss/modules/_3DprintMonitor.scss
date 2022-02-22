@@ -1,0 +1,53 @@
+#monitorWindow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  right: 30px;
+  left: 30px;
+  border-radius: 20px;
+  background-color: grey;
+  text-align: center;
+
+  button {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    align-self: center;
+  }
+
+  img {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+#logo{
+  position: absolute;
+  max-height: 150px;
+}
+
+#path46, #path48, #path54{
+  transform-origin: 385% 380%;
+}
+
+#path46, #path54{
+
+  @keyframes pathStart{
+    to{
+      transform: rotate(360deg);
+    }
+  }
+}
+
+#path48{
+  @keyframes pathStart2{
+    to{
+      transform: rotate(60deg);
+      fill: #6AD1D9;
+    }
+  }
+}

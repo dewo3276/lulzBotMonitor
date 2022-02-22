@@ -1,0 +1,82 @@
+@font-face {
+  font-family: mostra-nuova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: acumin-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: acumin-pro-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: acumin-pro-extra-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: acumin-pro-wide, sans-serif;
+  font-style: normal;
+}
+@font-face {
+  font-family: acumin-pro-thin, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+body {
+  font-family: acumin-pro-extra-condensed;
+  background-color: #bada55;
+}
+
+#monitorWindow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  right: 30px;
+  left: 30px;
+  border-radius: 20px;
+  background-color: grey;
+  text-align: center;
+}
+#monitorWindow button {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  align-self: center;
+}
+#monitorWindow img {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#logo {
+  position: absolute;
+  max-height: 150px;
+}
+
+#path46, #path48, #path54 {
+  transform-origin: 385% 380%;
+}
+
+@keyframes pathStart {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pathStart2 {
+  to {
+    transform: rotate(60deg);
+    fill: #6AD1D9;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
