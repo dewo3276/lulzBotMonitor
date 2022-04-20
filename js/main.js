@@ -24,7 +24,7 @@ const database = getDatabase(app);
 
 var button = document.getElementById("shutDown");
 
-onValue(ref(database,'relayStatus/'), (snapshot) => {
+onValue(ref(database,'/'), (snapshot) => {
   const data = snapshot.val().relayStatus;
   var statusUpdate = document.getElementById("status");
   var path46 = document.getElementById("path46");
@@ -35,6 +35,9 @@ onValue(ref(database,'relayStatus/'), (snapshot) => {
       statusUpdate.innerHTML ="The printer is currently powered down";
       statusUpdate.style.color="white";
       console.log("off");
+      path46.style.animation=""
+      path54.style.animation=""
+      path48.style.animation=""
       break;
     case 0:
       statusUpdate.innerHTML ="The printer is currently running";
@@ -46,14 +49,29 @@ onValue(ref(database,'relayStatus/'), (snapshot) => {
   }
 })
 
-button.onclick = function(){
+document.getElementById("shutDown").onclick = function(){
   var result = confirm("Are you sure you want to stop this print?");
   if (result == false){
     event.preventDefault();
   }
   else{
-    set(ref(database, 'relayStatus/'),{
+    set(ref(database, '/'),{
       relayStatus: 1
+    });
+  }
+}
+
+document.getElementById("activate").onclick = function(){
+  var result = confirm("Are you sure you want to turn the printer back on? WARNING: not currently capable of uploading or offloading prints");
+  if (result == false){
+    event.preventDefault();
+  }
+  else{
+    set(ref(database, '/'),{
+      relayStatus: 0
+    });
+    set(ref(database, '/'),{
+      firstPowerOn: 0
     });
   }
 }

@@ -32,6 +32,19 @@ body {
   background-color: #bada55;
 }
 
+iframe {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#monitoring {
+  display: flex;
+  justify-content: flex-end;
+}
+#monitoring div {
+  flex-grow: 4;
+}
+
 #monitorWindow {
   display: flex;
   flex-wrap: wrap;
@@ -51,6 +64,12 @@ body {
   margin-bottom: 10px;
   max-width: 100%;
   align-self: center;
+  background-color: white;
+}
+#monitorWindow button:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  background-color: #BADA55;
 }
 #monitorWindow img {
   padding-left: 20px;
@@ -58,11 +77,12 @@ body {
 }
 
 #logo {
-  position: absolute;
   max-height: 150px;
 }
 
-#path46, #path48, #path54 {
+#path46,
+#path48,
+#path54 {
   transform-origin: 385% 380%;
 }
 
