@@ -11,7 +11,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   position: absolute;
   top: 40px;
   bottom: 40px;
@@ -33,11 +33,6 @@
     cursor: pointer;
     transform: scale(1.15);
     background-color: #BADA55;
-  }
-
-  img {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 
@@ -67,4 +62,9 @@
       fill: #6AD1D9;
     }
   }
+}
+
+iframe{
+  width: 75%;
+  height: 75%;
 }

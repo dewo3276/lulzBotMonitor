@@ -49,7 +49,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   position: absolute;
   top: 40px;
   bottom: 40px;
@@ -70,10 +70,6 @@ iframe {
   cursor: pointer;
   transform: scale(1.15);
   background-color: #BADA55;
-}
-#monitorWindow img {
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 #logo {
@@ -97,6 +93,11 @@ iframe {
     transform: rotate(60deg);
     fill: #6AD1D9;
   }
+}
+
+iframe {
+  width: 75%;
+  height: 75%;
 }
 
 /*# sourceMappingURL=style.css.map */
